@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SummaryActivity"
+    android:layout_margin="0dp"
+    android:background="@drawable/bgapp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#D4AC0D"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="@string/loan_application_summary"
+        >
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_loan_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/hintcolor"
+        android:hint="@string/loan_summary"
+        >
+
+
+    </TextView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="24dp"
+            android:backgroundTint="@color/my_background_color"
+            android:text="@string/previous1">
+
+        </Button>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/my_background_color"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/submit">
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
