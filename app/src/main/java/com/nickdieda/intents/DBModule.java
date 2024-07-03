@@ -75,19 +75,22 @@ public boolean updateData(String name,String inst,String regno,int loanAmount) {
     ContentValues updated = new ContentValues();
     updated.put("name", name);
     updated.put("institution", inst);
-    updated.put("regno", regno);
+
     updated.put("loanAmount", loanAmount);
 
      long results =sdb.update("loans", updated, "regno=?", new String[]{regno});
-if(results==-1){
+    if(results==-1){
     return false;
 }
 else{
     return true;
 }
 }
-//public Cursor viewData(String regno){
+public Cursor viewData(String regno){
+    SQLiteDatabase sdb = this.getWritableDatabase();
 
-//}
+    Cursor cursor = sdb.rawQuery("select * from loans where regno=?", new String[]{regno});
+    return cursor;
+}
 
 }
