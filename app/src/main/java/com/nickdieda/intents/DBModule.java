@@ -78,8 +78,13 @@ public boolean updateData(String name,String inst,String regno,int loanAmount) {
     updated.put("regno", regno);
     updated.put("loanAmount", loanAmount);
 
-long return =sdb.update("loans", updated, "regno=?", new String[]{regno});
-
+     long results =sdb.update("loans", updated, "regno=?", new String[]{regno});
+if(results==-1){
+    return false;
+}
+else{
+    return true;
+}
 }
 //public Cursor viewData(String regno){
 
