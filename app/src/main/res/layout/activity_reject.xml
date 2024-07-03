@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgapp"
+    android:padding="10dp"
+    tools:context=".RejectActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#D4AC0D"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:text="Revoke Loan Application"
+        >
+
+    </TextView>
+
+<EditText
+    android:id="@+id/edt_revoke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Reg. Number"
+    android:textSize="24sp"
+    android:layout_marginTop="100dp"
+>
+</EditText>
+    <Button
+        android:id="@+id/btn_revoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/my_background_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Revoke">
+
+    </Button>
+
+</LinearLayout>

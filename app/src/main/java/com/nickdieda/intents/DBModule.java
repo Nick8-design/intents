@@ -55,13 +55,20 @@ public boolean insertData(String name,String inst,String regno,int loanAmount) {
 
 public boolean deleteData(String regno) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long results=db.delete("loans","regno=?",new String[]{regno});
-        if(results==-1){
+        Cursor cursor = db.rawQuery("select * from loans where regno=?", new String[]{regno});
+        if (cursor.getCount() > 0) {
+            long results=db.delete("loans","regno=?",new String[]{regno});
+            if(results==-1){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }else {
             return false;
         }
-        else{
-            return true;
-    }
+
+
         //String whereClause = "regno = ?";
      //   String[] whereArgs = {regno};
       //  int rowsAffected = db.delete("loans", whereClause, whereArgs);
