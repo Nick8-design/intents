@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bgapp"
     android:padding="10dp"
-    tools:context=".RejectActivity">
+    tools:context=".ViewActivity">
 
 
     <TextView
@@ -19,20 +19,20 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="32sp"
-        android:text="Revoke Loan Application"
+        android:text="View Loan Application"
         >
 
     </TextView>
 
-<EditText
-    android:id="@+id/edt_revoke"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Reg. Number"
-    android:textSize="24sp"
-    android:layout_marginTop="100dp"
->
-</EditText>
+    <EditText
+        android:id="@+id/edt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Registration Name"
+        android:textSize="24sp"
+        android:layout_marginTop="100dp"
+        >
+    </EditText>
     <LinearLayout
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
 
 
         <Button
-            android:id="@+id/btn_revoke"
+            android:id="@+id/btn_view"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
@@ -64,7 +64,7 @@
             android:backgroundTint="@color/my_background_color"
             android:layout_gravity="center_horizontal"
 
-            android:text="Revoke">
+                android:text="View">
 
         </Button>
     </LinearLayout>

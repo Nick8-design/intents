@@ -1,5 +1,6 @@
 package com.nickdieda.intents;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RejectActivity extends AppCompatActivity {
     EditText edRevoke;
-    Button btn_Revoke;
+    Button btn_Revoke,homea;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class RejectActivity extends AppCompatActivity {
 
         edRevoke=findViewById(R.id.edt_revoke);
         btn_Revoke=findViewById(R.id.btn_revoke);
+        homea=findViewById(R.id.home);
 
         DBModule db=new DBModule(this);
 
@@ -39,6 +41,13 @@ public class RejectActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Failed! Could not revoke reg no does not exist",Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        homea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(getApplicationContext(), MainActivity.class));
             }
         });
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
@@ -20,11 +21,21 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.firebase.Firebase;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.nickdieda.intents.databinding.ActivitySummaryBinding;
 
 public class SummaryActivity extends AppCompatActivity {
     Button pre,submit;
     TextView tvLoanSummary;
+
+
+    FirebaseDatabase firebasedb;
+    DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +48,11 @@ public class SummaryActivity extends AppCompatActivity {
         pre=findViewById(R.id.previous);
         submit=findViewById(R.id.submit);
         tvLoanSummary=findViewById(R.id.tv_loan_summary);
+
+
+        firebasedb=FirebaseDatabase.getInstance();
+        dbRef=firebasedb.getReference("loans");
+
 
 
         String name=getIntent().getStringExtra("name");
@@ -64,6 +80,24 @@ submit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         // save data to firebase
+        LoanApplication application=new LoanApplication(name,inst,regno,loan);
+        dbRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                dbRef.child(name).setValue(application);
+                Toast.makeText(getApplicationContext(), "Loan application submitted successfully", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "Failed to submit loan application", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
+
 
         //save data to sqllite db
         boolean results=db.insertData(name,inst,regno,loan);

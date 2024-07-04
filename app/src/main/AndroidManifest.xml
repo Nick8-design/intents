@@ -13,6 +13,30 @@
         android:theme="@style/SplashScreenTheme"
         tools:targetApi="31">
         <activity
+            android:name=".ViewHome"
+            android:exported="false"
+            android:theme="@style/Theme.Intents"/>
+        <activity
+            android:name=".ViewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
+            android:name=".Updatedb"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
+            android:name=".UpdateLoan"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
+            android:name=".EnterRegToView"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
+            android:name=".ViewStatus"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
             android:name=".RejectActivity"
             android:exported="false"
             android:theme="@style/Theme.Intents" />
@@ -27,7 +51,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-android:theme="@style/SplashScreenTheme">
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

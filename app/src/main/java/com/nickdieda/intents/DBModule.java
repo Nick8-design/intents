@@ -82,7 +82,6 @@ public boolean updateData(String name,String inst,String regno,int loanAmount) {
     ContentValues updated = new ContentValues();
     updated.put("name", name);
     updated.put("institution", inst);
-
     updated.put("loanAmount", loanAmount);
 
      long results =sdb.update("loans", updated, "regno=?", new String[]{regno});
@@ -99,5 +98,34 @@ public Cursor viewData(String regno){
     Cursor cursor = sdb.rawQuery("select * from loans where regno=?", new String[]{regno});
     return cursor;
 }
+
+
+        // ... other methods ...
+
+        public String getAllDataAsString() {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("SELECT * FROM loans", null);
+            StringBuilder allData = new StringBuilder();
+
+            while (cursor.moveToNext()) {
+                String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+                String institution = cursor.getString(cursor.getColumnIndexOrThrow("institution"));
+                String regno = cursor.getString(cursor.getColumnIndexOrThrow("regno"));
+                int loanAmount = cursor.getInt(cursor.getColumnIndexOrThrow("loanAmount"));
+
+                allData.append("Name: ").append(name).append("\n");
+                allData.append("Institution: ").append(institution).append("\n");
+                allData.append("Reg No: ").append(regno).append("\n");
+                allData.append("Loan Amount: ").append(loanAmount).append("\n\n");
+            }
+
+            cursor.close();
+            db.close();
+            return allData.toString();
+        }
+
+
+
+
 
 }

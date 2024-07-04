@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Updatedb"
+    android:padding="8dp"
+    android:background="@drawable/bgapp">
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#D4AC0D"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:text="Update Details"
+        >
+
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:inputType="textCapWords"
+        android:hint="@string/name"
+        android:textSize="24sp"
+        android:textColorHint="@color/hintcolor"/>
+    <EditText
+        android:id="@+id/institute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:inputType="textCapWords"
+        android:hint="@string/institute"
+        android:textColorHint="@color/hintcolor"/>
+    <EditText
+        android:id="@+id/regno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:inputType="text"
+       />
+    <EditText
+        android:id="@+id/loan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:inputType="numberDecimal"
+        android:hint="@string/loan_amount"
+        android:textColorHint="@color/hintcolor"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+
+        android:layout_marginBottom="100dp">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+
+            android:backgroundTint="@color/my_background_color"
+            android:text="Back" />
+
+
+
+        <Button
+            android:id="@+id/Update"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginStart="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/my_background_color"
+            android:text="Update" />
+    </LinearLayout>
+
+</LinearLayout>

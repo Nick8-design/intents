@@ -55,4 +55,8 @@
     <string name="loan_application_summary">Loan Application Summary</string>
     <string name="submit">Submit</string>
     <string name="previous1">Previous</string>
+    <string name="view_loan_status">View Loan Status</string>
+    <string name="reject_loan_application">Reject loan Application</string>
+    <string name="your_loan_status">Your loan status</string>
+    <string name="enter_registration_number">Enter Registration Number</string>
 </resources>

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgapp"
-    android:padding="10dp"
-    tools:context=".RejectActivity">
-
+    android:orientation="vertical"
+    tools:context=".EnterRegToView"
+    android:layout_margin="0dp"
+    android:padding="8dp"
+    android:background="@drawable/bgapp">
 
     <TextView
         android:layout_width="match_parent"
@@ -18,21 +18,21 @@
         android:textColor="#D4AC0D"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="32sp"
-        android:text="Revoke Loan Application"
+        android:textSize="28sp"
+        android:text="@string/enter_registration_number" />
+
+    <EditText
+        android:id="@+id/regnou"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="@string/registration_number"
+        android:textColorHint="@color/hintcolor"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
         >
 
-    </TextView>
+    </EditText>
 
-<EditText
-    android:id="@+id/edt_revoke"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Reg. Number"
-    android:textSize="24sp"
-    android:layout_marginTop="100dp"
->
-</EditText>
     <LinearLayout
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
@@ -42,32 +42,30 @@
         android:layout_marginBottom="100dp">
 
         <Button
-            android:id="@+id/home"
+            android:id="@+id/back"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="50dp"
+
             android:backgroundTint="@color/my_background_color"
             android:text="Back" />
 
 
+
         <Button
-            android:id="@+id/btn_revoke"
+            android:id="@+id/Update"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:textSize="20sp"
+            android:layout_weight="1"
             android:textColor="@color/white"
-            android:backgroundTint="@color/my_background_color"
+            android:textSize="20sp"
+            android:layout_marginStart="50dp"
             android:layout_gravity="center_horizontal"
-
-            android:text="Revoke">
-
-        </Button>
+            android:backgroundTint="@color/my_background_color"
+            android:text="Update" />
     </LinearLayout>
-
 
 </LinearLayout>
