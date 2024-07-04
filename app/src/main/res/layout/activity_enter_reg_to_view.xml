@@ -19,7 +19,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="28sp"
-        android:text="@string/enter_registration_number" />
+        android:text="View Loan Offline" />
 
 <EditText
     android:id="@+id/regnou"

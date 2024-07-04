@@ -45,6 +45,18 @@ Button sql,fb,allsql,allfb,home;
             }
         });
 
+        allsql.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),SqlViewAll.class));
+            }
+        });
+        allfb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),OnlineDatabase.class));
+            }
+        });
 
 
 

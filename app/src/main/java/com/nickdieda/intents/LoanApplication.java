@@ -10,7 +10,9 @@ private int loanAmount;
         this.regno = regno;
         this.loanAmount = loanAmount;
     }
-
+    public LoanApplication() {
+        // Empty constructor for Firebase
+    }
     public String getName() {
         return name;
     }

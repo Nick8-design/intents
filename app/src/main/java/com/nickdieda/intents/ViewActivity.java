@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ViewActivity extends AppCompatActivity {
 EditText edtView;
-Button btnView;
+Button btnView,home;
 
 FirebaseDatabase database;
 DatabaseReference dbRef;
@@ -33,6 +33,7 @@ DatabaseReference dbRef;
         setContentView(R.layout.activity_view);
       edtView=findViewById(R.id.edt_view);
       btnView=findViewById(R.id.btn_view);
+      home=findViewById(R.id.home);
 
       database=FirebaseDatabase.getInstance();
       dbRef=database.getReference("loans");
@@ -86,6 +87,13 @@ DatabaseReference dbRef;
                     });
 
             }
+          }
+      });
+
+      home.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              startActivity( new Intent(getApplicationContext(), ViewHome.class));
           }
       });
 

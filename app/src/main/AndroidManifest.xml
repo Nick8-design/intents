@@ -13,9 +13,17 @@
         android:theme="@style/SplashScreenTheme"
         tools:targetApi="31">
         <activity
+            android:name=".OnlineDatabase"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
+            android:name=".SqlViewAll"
+            android:exported="false"
+            android:theme="@style/Theme.Intents" />
+        <activity
             android:name=".ViewHome"
             android:exported="false"
-            android:theme="@style/Theme.Intents"/>
+            android:theme="@style/Theme.Intents" />
         <activity
             android:name=".ViewActivity"
             android:exported="false"
